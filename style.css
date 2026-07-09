@@ -1,1 +1,86 @@
 /* Maa Ambeshwari Medicines Styles */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f7fb;
+    color:#222;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.top-bar{
+    background:#008c7a;
+    color:#fff;
+    text-align:center;
+    padding:10px;
+}
+
+.header{
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.logo img{
+    width:80px;
+}
+.header-flex{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 0;
+}
+
+.search-box{
+    display:flex;
+    flex:1;
+    max-width:400px;
+}
+
+.search-box input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px 0 0 6px;
+}
+
+.search-box button{
+    background:#00a651;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    cursor:pointer;
+    border-radius:0 6px 6px 0;
+}
+
+.navbar{
+    background:#ffffff;
+    border-top:1px solid #eee;
+    border-bottom:1px solid #eee;
+}
+
+.navbar ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:15px;
+}
+
+.navbar a{
+    text-decoration:none;
+    color:#333;
+    font-weight:bold;
+}
+
+.navbar a:hover{
+    color:#00a651;
+}
