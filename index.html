@@ -1,98 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maa Ambeshwari Medicines</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maa Ambeshwari Medicines</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background: #f4f7f6; color: #333; }
+        
+        /* Apollo Style Header & Nav */
+        header { background: #0b7a75; color: white; padding: 15px 20px; display: flex; flex-direction: column; align-items: center; gap: 10px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .nav-container { width: 100%; max-width: 1200px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        header h1 { font-size: 24px; font-weight: bold; }
+        
+        /* Search Bar like Apollo */
+        .search-container { width: 100%; max-width: 500px; position: relative; }
+        .search-container input { width: 100%; padding: 12px 20px; border: none; border-radius: 25px; font-size: 15px; outline: none; box-shadow: inset 0 2px 5px rgba(0,0,0,0.1); }
 
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
+        /* Hero Banner */
+        .hero { background: linear-gradient(135deg, #0b7a75, #00b894); color: white; padding: 40px 20px; text-align: center; }
+        .hero h2 { font-size: 32px; margin-bottom: 10px; }
+        .hero p { font-size: 16px; margin-bottom: 20px; opacity: 0.9; }
+        .btn-group { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
+        .btn { display: inline-block; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: bold; color: white; transition: 0.3s; }
+        .whatsapp { background: #25D366; }
+        .call { background: #ff5722; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
 
-body{
-background:#f5f7fa;
-color:#333;
-}
+        /* Main Content Section */
+        .main-section { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+        .section-title { font-size: 22px; color: #0b7a75; margin-bottom: 20px; text-align: left; font-weight: 600; border-left: 4px solid #0b7a75; padding-left: 10px; }
+        
+        /* Product Categories Grid */
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+        .category-card { background: white; padding: 25px 20px; border-radius: 12px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: 0.3s; border: 1px solid #eef2f1; text-decoration: none; display: block; }
+        .category-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); border-color: #0b7a75; }
+        .category-icon { font-size: 40px; margin-bottom: 15px; display: block; }
+        .category-name { font-size: 18px; color: #0b7a75; font-weight: bold; margin-bottom: 5px; }
+        .category-desc { color: #777; font-size: 13px; }
 
-header{
-background:#0b7a75;
-color:white;
-padding:20px;
-text-align:center;
-}
+        /* Contact Info */
+        .contact-box { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-top: 30px; text-align: center; }
+        .contact-box p { margin: 8px 0; font-size: 16px; }
 
-header h1{
-font-size:34px;
-}
+        /* Footer */
+        footer { background: #222; color: #ccc; padding: 30px 20px; text-align: center; margin-top: 50px; font-size: 14px; }
+        footer h3 { color: white; margin-bottom: 10px; }
+        .social-links { margin-top: 15px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+        .social-links a { padding: 8px 16px; border-radius: 4px; color: white; text-decoration: none; font-weight: bold; font-size: 13px; }
+    </style>
+</head>
+<body>
 
-header p{
-margin-top:10px;
-}
-
-.hero{
-padding:60px 20px;
-text-align:center;
-background:linear-gradient(to right,#0b7a75,#00b894);
-color:white;
-}
-
-.hero h2{
-font-size:38px;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:18px;
-margin-bottom:30px;
-}
-
-.btn{
-display:inline-block;
-padding:15px 30px;
-margin:10px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
-color:white;
-}
-
-.whatsapp{
-background:#25D366;
-}
-
-.call{
-background:#ff5722;
-}
-
-.section{
-padding:50px 20px;
-text-align:center;
-}
-
-.cards{
-display:flex;
-<section class="section">
-        <h2>Our Products</h2>
-        <div class="cards">
-            <div class="card">
-                <h3><a href="tablets.html" style="text-decoration: none; color: #0b7a75;">💊 Tablets</a></h3>
-                <p>All Brands Available</p>
-            </div>
-            <div class="card">
-                <h3><a href="syrups.html" style="text-decoration: none; color: #0b7a75;">🧪 Syrup</a></h3>
-                <p>All Brands Available</p>
-            </div>
-            <div class="card">
-                <h3><a href="injections.html" style="text-decoration: none; color: #0b7a75;">💉 Injection</a></h3>
-                <p>All Brands Available</p>
-            </div>
-            <div class="card">
-                <h3><a href="surgical.html" style="text-decoration: none; color: #0b7a75;">✂️ Surgical Items</a></h3>
-                <p>All Medical Supplies</p>
+    <header>
+        <div class="nav-container">
+            <h1>Maa Ambeshwari Medicines</h1>
+            <div class="search-container">
+                <input type="text" placeholder="Search medicines, brands and more...">
             </div>
         </div>
+    </header>
+
+    <section class="hero">
+        <h2>Wholesale Medicines Supplier</h2>
+        <p>Your Trusted Pharmacy Partner. Get Tablets, Syrups, Injections & Surgical items at best rates.</p>
+        <div class="btn-group">
+            <a href="https://wa.me/919120718199" class="btn whatsapp">Message on WhatsApp</a>
+            <a href="tel:9120718199" class="btn call">Call Now</a>
+        </div>
     </section>
+
+    <main class="main-section">
+        <h2 class="section-title">Shop by Category</h2>
+        
+        <div class="grid-container">
+            <a href="tablets.html" class="category-card">
+                <span class="category-icon">💊</span>
+                <div class="category-name">Tablets</div>
+                <div class="category-desc">All Brands Available</div>
+            </a>
+            
+            <a href="syrups.html" class="category-card">
+                <span class="category-icon">🧪</span>
+                <div class="category-name">Syrups</div>
+                <div class="category-desc">All Brands Available</div>
+            </a>
+            
+            <a href="injections.html" class="category-card">
+                <span class="category-icon">💉</span>
+                <div class="category-name">Injections</div>
+                <div class="category-desc">All Brands Available</div>
+            </a>
+            
+            <a href="surgical.html" class="category-card">
+                <span class="category-icon">✂️</span>
+                <div class="category-name">Surgical Items</div>
+                <div class="category-desc">All Medical Supplies</div>
+            </a>
+        </div>
+
+        <div class="contact-box">
+            <h2 class="section-title" style="border: none; text-align: center; padding: 0;">Contact Us</h2>
+            <p><b>📞 Phone:</b> +91 9120718199</p>
+            <p><b>📍 Address:</b> Rajendra Nagar</p>
+        </div>
+    </main>
+
+    <footer>
+        <h3>Maa Ambeshwari Medicines</h3>
+        <p>Wholesale Medicines Supplier</p>
+        <p>© 2026 All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/maaambeshwari?igsh=emwxZXBnMnEydGZq" style="background: #E1306C;">Instagram</a>
+            <a href="https://www.youtube.com/@tripke1" style="background: #FF0000;">YouTube</a>
+            <a href="https://www.facebook.com/share/17kGHTMEQV/" style="background: #1877F2;">Facebook</a>
+        </div>
+    </footer>
+
+</body>
+</html>
